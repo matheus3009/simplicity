@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-* {box-sizing: border-box;}
+* {
+    box-sizing: border-box;
+}
 
 :root {
     --cor-titulo: #4d4d4d;
@@ -10,7 +12,9 @@
     --cor-itermediaria: #ececec;
 }
 
-html { font-size: 16px; }
+html {
+    font-size: 16px;
+}
 
 body {
     color: var(--cor-texto);
@@ -18,21 +22,30 @@ body {
     background-color: var(--cor-clara);
 }
 
-body, h1, h2, p, figure, nav ul {
+body,
+h1,
+h2,
+p,
+figure,
+nav ul {
     margin: 0;
     padding: 0;
 }
 
-img { max-width: 100%;}
+img {
+    max-width: 100%;
+}
 
-a {text-decoration: none;}
+a {
+    text-decoration: none;
+}
 
-h1{
+h1 {
     font-family: Raleway, sans-serif;
     text-transform: uppercase;
     font-weight: 800;
     font-size: 1.5rem;
-    
+
 }
 
 h1 a {
@@ -56,10 +69,14 @@ nav h2 a {
     display: inline-block;
 }
 
-nav h2 a:hover, nav h2 a:focus, .links-menu a:focus, .links-menu a:hover {
+nav h2 a:hover,
+nav h2 a:focus,
+.links-menu a:focus,
+.links-menu a:hover {
     background-color: var(--cor-itermediaria);
 
 }
+
 /* estilo da lista na nav */
 .links-menu {
     list-style: none;
@@ -67,6 +84,7 @@ nav h2 a:hover, nav h2 a:focus, .links-menu a:focus, .links-menu a:hover {
     Será alterado mais para frente. */
     display: none;
 }
+
 /* estilo dos links na ul dentro do nav */
 .links-menu a {
     color: var(--cor-escura);
@@ -92,4 +110,19 @@ nav h2 a:hover, nav h2 a:focus, .links-menu a:focus, .links-menu a:hover {
     left: 0;
     right: 0;
     background-color: var(--cor-clara);
+}
+
+.destaque {
+    height: 500px;
+    background-image: url(../imagens/fundo-destaque.jpg) ;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.destaque h2, .destaque p {
+    text-align: center;
+    color: var(--cor-clara);
 }
