@@ -56,6 +56,7 @@ h1 a {
 }
 
 header {
+    height: 12vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -113,7 +114,7 @@ nav h2 a:focus,
 }
 
 .destaque {
-    height: 500px;
+    height: 88vh;
     background-image: url(../imagens/fundo-destaque.jpg) ;
     background-attachment: fixed;
     display: flex;
@@ -122,7 +123,26 @@ nav h2 a:focus,
     flex-direction: column;
 }
 
+
+/* sobre a função clamp()
+Função útil para redimensionamento responsivo de acordo com certos critérios.
+
+clamp(
+    tamanhomínimo,
+    tamanhoideal/variavel/responsivo,
+    tamanhomaximo);
+*/
+
+
 .destaque h2, .destaque p {
     text-align: center;
     color: var(--cor-clara);
+}
+
+.destaque h2 {
+    font-size: clamp(3rem, 10vw , 7rem);
+}
+
+.destaque p {
+    font-size: clamp(1.5rem, 3vw, 3rem);
 }
