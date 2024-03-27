@@ -137,6 +137,10 @@ clamp(
 .destaque h2, .destaque p {
     text-align: center;
     color: var(--cor-clara);
+
+    animation-name: animaDestaque;
+    animation-duration: 1s;
+    
 }
 
 .destaque h2 {
@@ -146,3 +150,17 @@ clamp(
 .destaque p {
     font-size: clamp(1.5rem, 3vw, 3rem);
 }
+
+/* Regra de animação */
+    @keyframes animaDestaque {
+        /* Dê (estado inicial, como começa) */
+        from {
+            opacity: 0;
+            transform: translateY(-300px);
+        }
+
+        /* Para (estado final, como termina */
+        to{
+            opacity: 1;
+        }
+    }
