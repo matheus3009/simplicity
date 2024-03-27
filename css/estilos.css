@@ -56,13 +56,16 @@ nav h2 a {
     display: inline-block;
 }
 
-nav h2 a:hover, nav h2 a:focus, .links-menu a:focus {
+nav h2 a:hover, nav h2 a:focus, .links-menu a:focus, .links-menu a:hover {
     background-color: var(--cor-itermediaria);
 
 }
 /* estilo da lista na nav */
 .links-menu {
     list-style: none;
+    /* para funcionar o abrir e fechar precisamos de js o que não estamos aprendendo no momento.
+    Será alterado mais para frente. */
+    display: none;
 }
 /* estilo dos links na ul dentro do nav */
 .links-menu a {
@@ -70,7 +73,23 @@ nav h2 a:hover, nav h2 a:focus, .links-menu a:focus {
     font-weight: bold;
     display: flex;
     height: 50px;
-    background-color: hotpink;
+    /* background-color: hotpink; */
     justify-content: center;
     align-items: center;
+}
+
+
+/* Regra que será aplicada somente quando o menu for acionado para abertura */
+.links-menu.aberto {
+    /* Ativando o flex fazemos com que os links voltem a aparecer. */
+    display: flex;
+
+    /* Fazemos com que eles fiquem um acima do outro usando o flex column */
+    flex-direction: column;
+
+    /* Ativamos position: absolute e ajustamos a posição final dos links usando propriedades de coordenadas. */
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: var(--cor-clara);
 }
