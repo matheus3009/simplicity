@@ -56,7 +56,21 @@ nav h2 a {
     display: inline-block;
 }
 
-nav h2 a:hover, nav h2 a:focus {
+nav h2 a:hover, nav h2 a:focus, .links-menu a:focus {
     background-color: var(--cor-itermediaria);
 
+}
+/* estilo da lista na nav */
+.links-menu {
+    list-style: none;
+}
+/* estilo dos links na ul dentro do nav */
+.links-menu a {
+    color: var(--cor-escura);
+    font-weight: bold;
+    display: flex;
+    height: 50px;
+    background-color: hotpink;
+    justify-content: center;
+    align-items: center;
 }
