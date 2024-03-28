@@ -226,3 +226,19 @@ clamp(
         align-items: center;
         text-align: center;
     }
+
+    /* Regras para as páginas Produtos, serviços e Contato */
+
+    .conteudo {
+        background-color: var(--cor-itermediaria);
+        padding: 0.5rem;
+        border-radius: 8px;
+    }
+
+    .conteudo h2 {
+        padding: 0;
+        font-size: 1.8rem;
+        border-bottom: solid 1px;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+    }
