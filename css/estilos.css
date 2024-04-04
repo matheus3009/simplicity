@@ -67,7 +67,8 @@ header .limitador {
 }
 
 header {
-    position: sticky;
+    z-index: 100;
+    position: sticky ;
     top: 0;
     background-color: var(--cor-clara);
 }
@@ -297,8 +298,39 @@ clamp(
     td:last-child, td:last-child {
         text-align: right;
     }
+
+   /* Regras pagina serviço */
+
+    figure div {
+        text-align: center;
+    }
+
+   .imagens-servicos img {
+        border-radius: 50%;
+        transform: scale(0.8);
+        filter: brightness(120%) blur(2px);
+
+    }
+
+    figure img:hover{
+        transform: scale(1);
+        border-radius: 20%;
+        transition: 0.5s;
+        filter: none;
+
+    }
     
-    
+
+
+
+
+
+
+
+
+
+
+
     @media screen and (min-width: 570px) {
         
      nav h2  {
@@ -322,7 +354,8 @@ clamp(
         .front-end img {
             height: 150px;
         }
-        
+    }
+
         @media screen and (min-width: 1000px){
             html {
                 font-size: 18px;
@@ -333,4 +366,4 @@ clamp(
             }
         }
         
-      
+    
