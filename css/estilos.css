@@ -276,3 +276,53 @@ clamp(
     tr:nth-child(even) {
         background-color: var(--cor-itermediaria);
     }
+
+    td:last-child::before {
+        content: "R$";
+    }
+
+    td:nth-child(2){
+        text-align: center;
+    }
+
+    td:last-child, td:last-child {
+        text-align: right;
+    }
+
+    @media screen and (min-width: 570px) {
+        
+     nav h2  {
+        display: none;
+        }
+
+        .links-menu{
+            display: flex;
+            /* justify-content: space-between; */
+        }
+
+        nav{
+            width: 60%;
+        }
+
+        .links-menu li {
+            width: 100%;
+    
+        }
+
+        .front-end img {
+            height: 150px;
+        }
+        
+        @media screen and (min-width: 1000px){
+            html {
+                font-size: 18px;
+            }
+
+            .limitador {
+                max-width: 1000px;
+            }
+
+            
+        }
+        
+    
