@@ -55,13 +55,22 @@ h1 a {
     border-radius: 4px;
 }
 
-header {
+header .limitador {
+    position: sticky;
+    top: 0;
+    background-color: var(--cor-clara);
+    
     height: 12vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+header {
+    position: sticky;
+    top: 0;
+    background-color: var(--cor-clara);
+}
 nav h2 a {
     color: var(--cor-escura);
     font-size: 1.2rem;
@@ -288,7 +297,8 @@ clamp(
     td:last-child, td:last-child {
         text-align: right;
     }
-
+    
+    
     @media screen and (min-width: 570px) {
         
      nav h2  {
@@ -321,8 +331,6 @@ clamp(
             .limitador {
                 max-width: 1000px;
             }
-
-            
         }
         
-    
+      
