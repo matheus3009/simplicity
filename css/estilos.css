@@ -312,7 +312,7 @@ clamp(
 
     }
 
-    figure img:hover{
+    .imagens-servicos img:hover{
         transform: scale(1);
         border-radius: 20%;
         transition: 0.5s;
