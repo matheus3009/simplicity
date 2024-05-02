@@ -59,7 +59,7 @@ header .limitador {
     position: sticky;
     top: 0;
     background-color: var(--cor-clara);
-    
+
     height: 12vh;
     display: flex;
     justify-content: space-between;
@@ -68,10 +68,11 @@ header .limitador {
 
 header {
     z-index: 100;
-    position: sticky ;
+    position: sticky;
     top: 0;
     background-color: var(--cor-clara);
 }
+
 nav h2 a {
     color: var(--cor-escura);
     font-size: 1.2rem;
@@ -125,7 +126,7 @@ nav h2 a:focus,
 
 .destaque {
     height: 88vh;
-    background-image: url(../imagens/fundo-destaque.jpg) ;
+    background-image: url(../imagens/fundo-destaque.jpg);
     background-attachment: fixed;
     display: flex;
     align-items: center;
@@ -144,17 +145,18 @@ clamp(
 */
 
 
-.destaque h2, .destaque p {
+.destaque h2,
+.destaque p {
     text-align: center;
     color: var(--cor-clara);
 
     animation-name: animaDestaque;
     animation-duration: 1s;
-    
+
 }
 
 .destaque h2 {
-    font-size: clamp(3rem, 10vw , 7rem);
+    font-size: clamp(3rem, 10vw, 7rem);
 }
 
 .destaque p {
@@ -162,208 +164,271 @@ clamp(
 }
 
 /* Regra de animação */
-    @keyframes animaDestaque {
-        /* Dê (estado inicial, como começa) */
-        from {
-            opacity: 0;
-            transform: translateY(-300px);
-        }
+@keyframes animaDestaque {
 
-        /* Para (estado final, como termina */
-        to{
-            opacity: 1;
-        }
+    /* Dê (estado inicial, como começa) */
+    from {
+        opacity: 0;
+        transform: translateY(-300px);
     }
 
-    article h2 {
-        padding: 1rem;
-        font-size: 1.4rem;
-        font-family: Raleway, sans-serif;
-        color: var(--cor-titulo);
+    /* Para (estado final, como termina */
+    to {
+        opacity: 1;
+    }
+}
+
+article h2 {
+    padding: 1rem;
+    font-size: 1.4rem;
+    font-family: Raleway, sans-serif;
+    color: var(--cor-titulo);
+}
+
+.front-end,
+.historia,
+.localizacao {
+    text-align: center;
+}
+
+article p {
+    padding: 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+address {
+    font-style: normal;
+    font-size: 1.2rem;
+}
+
+.historia {
+    width: 100vw;
+    background-image: url(/imagens/fundo-madeira.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    padding-bottom: 1rem;
+}
+
+.historia h2 {
+    color: var(--cor-clara);
+    text-shadow: 5px 5px 5px var(--cor-escura);
+
+}
+
+.historia iframe {
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 2rem;
+}
+
+.localizacao iframe {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.limitador {
+    width: 95vw;
+    margin: auto;
+}
+
+footer {
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
+    height: 30vw;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Regras para as páginas Produtos, serviços e Contato */
+
+.conteudo {
+    background-color: var(--cor-itermediaria);
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+
+.conteudo h2 {
+    padding: 0;
+    font-size: 1.8rem;
+    border-bottom: solid 1px;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
+table {
+    border: solid 4px;
+    width: 80%;
+    margin: auto;
+    max-width: 600px;
+    border-collapse: collapse;
+}
+
+caption {
+    text-transform: uppercase;
+    font-size: 2rem;
+    padding-bottom: 0.5rem;
+}
+
+th,
+td {
+    border: solid 1px;
+}
+
+th {
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
+    border-color: var(--cor-escura);
+    padding: 0.8rem;
+}
+
+td {
+    padding: 0.5rem;
+}
+
+tr:nth-child(odd) {
+    background-color: var(--cor-clara);
+}
+
+tr:nth-child(even) {
+    background-color: var(--cor-itermediaria);
+}
+
+td:last-child::before {
+    content: "R$";
+}
+
+td:nth-child(2) {
+    text-align: center;
+}
+
+td:last-child,
+td:last-child {
+    text-align: right;
+}
+
+/* Regras pagina serviço */
+
+figure div {
+    text-align: center;
+}
+
+.imagens-servicos img {
+    border-radius: 50%;
+    transform: scale(0.8);
+    filter: brightness(120%) blur(2px);
+
+}
+
+.imagens-servicos img:hover {
+    transform: scale(1);
+    border-radius: 20%;
+    transition: 0.5s;
+    filter: none;
+
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+}
+
+input,
+select,
+textarea {
+    border: none;
+    padding: 4px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: var(--cor-clara);
+}
+
+textarea {
+    height: auto;
+}
+
+form div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    width: 30%;
+    
+}
+
+/* Pseudo-classe :not()
+permitir criar exceções para uma regra. Neste exemplo, estamos aplicando 70% de largura para tudo (*) dentro do 'form div' exceto 'label' */
+form div *:not(label) {
+    width: 70%;
+}
+
+button {
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
+    border: none;
+    font-weight: bold;
+    padding: 1rem 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 500ms;
+}
+
+button:hover, button:focus {
+    background-color: var(--cor-clara);
+    color: var(--cor-escura);
+    box-shadow: var(--cor-escura) 0 0 2px;
+}
+
+#cep {width: 60%;}
+
+#buscar {
+    width: 39%;
+    padding: 12px;
+}
+
+.campos-restantes {display: none;}
+
+
+
+
+@media screen and (min-width: 570px) {
+
+    nav h2 {
+        display: none;
     }
 
-    .front-end, .historia, .localizacao {
-        text-align: center;
+    .links-menu {
+        display: flex;
+        /* justify-content: space-between; */
     }
 
-    article p {
-        padding: 0.5rem 0;
-        font-size: 1.2rem;
+    nav {
+        width: 60%;
     }
 
-    address {
-        font-style: normal;
-        font-size: 1.2rem;
-    }
-
-    .historia{
-        width: 100vw;
-        background-image: url(/imagens/fundo-madeira.jpg);
-        background-attachment: fixed;
-        background-size: cover;
-        padding-bottom: 1rem;
-    }
-
-    .historia h2 {
-        color: var(--cor-clara);
-        text-shadow: 5px 5px 5px var(--cor-escura);
-
-    }
-
-    .historia iframe {
+    .links-menu li {
         width: 100%;
-        max-width: 700px;
-        margin-bottom: 2rem;
+
     }
 
-    .localizacao iframe{
-        width: 100%;
-        margin-top: 2rem;
+    .front-end img {
+        height: 150px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    html {
+        font-size: 18px;
     }
 
     .limitador {
-        width: 95vw;
-        margin: auto;
+        max-width: 1000px;
     }
-
-    footer {
-        background-color: var(--cor-escura);
-        color: var(--cor-clara);
-        height: 30vw;
-        font-weight: bold;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-
-    /* Regras para as páginas Produtos, serviços e Contato */
-
-    .conteudo {
-        background-color: var(--cor-itermediaria);
-        padding: 0.5rem;
-        border-radius: 8px;
-    }
-
-    .conteudo h2 {
-        padding: 0;
-        font-size: 1.8rem;
-        border-bottom: solid 1px;
-        margin-bottom: 1rem;
-        padding-bottom: 1rem;
-    }
-    
-    table{
-        border: solid 4px;
-        width:  80%;
-        margin: auto;
-        max-width: 600px;
-        border-collapse: collapse;
-    }
-
-    caption {
-        text-transform: uppercase;
-        font-size: 2rem;
-        padding-bottom:  0.5rem;
-    }
-
-    th, td { border: solid 1px;}
-
-    th {
-        background-color: var(--cor-escura);
-        color: var(--cor-clara);
-        border-color: var(--cor-escura);
-        padding: 0.8rem;
-    }
-
-    td {
-        padding: 0.5rem;
-    }
-
-    tr:nth-child(odd) {
-        background-color: var(--cor-clara);
-    }
-    tr:nth-child(even) {
-        background-color: var(--cor-itermediaria);
-    }
-
-    td:last-child::before {
-        content: "R$";
-    }
-
-    td:nth-child(2){
-        text-align: center;
-    }
-
-    td:last-child, td:last-child {
-        text-align: right;
-    }
-
-   /* Regras pagina serviço */
-
-    figure div {
-        text-align: center;
-    }
-
-   .imagens-servicos img {
-        border-radius: 50%;
-        transform: scale(0.8);
-        filter: brightness(120%) blur(2px);
-
-    }
-
-    .imagens-servicos img:hover{
-        transform: scale(1);
-        border-radius: 20%;
-        transition: 0.5s;
-        filter: none;
-
-    }
-    
-
-
-
-
-
-
-
-
-
-
-
-    @media screen and (min-width: 570px) {
-        
-     nav h2  {
-        display: none;
-        }
-
-        .links-menu{
-            display: flex;
-            /* justify-content: space-between; */
-        }
-
-        nav{
-            width: 60%;
-        }
-
-        .links-menu li {
-            width: 100%;
-    
-        }
-
-        .front-end img {
-            height: 150px;
-        }
-    }
-
-        @media screen and (min-width: 1000px){
-            html {
-                font-size: 18px;
-            }
-
-            .limitador {
-                max-width: 1000px;
-            }
-        }
-        
-    
+}
