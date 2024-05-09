@@ -7,7 +7,7 @@ const campoCep = formulario.querySelector("#cep");
 const campoEndereco = formulario.querySelector("#endereco");
 const campoBairro = formulario.querySelector("#bairro");
 const campoCidade = formulario.querySelector("#cidade");
-const estado = formulario.querySelector("#cidade");
+const estado = formulario.querySelector("#estado");
 const botaoBuscar = formulario.querySelector("#buscar");
 const mensagemStatus = formulario.querySelector("#status");
 
@@ -68,3 +68,4 @@ botaoBuscar.addEventListener("click", async function(event){
         estado.value = dados.uf;
     }
 })
+
